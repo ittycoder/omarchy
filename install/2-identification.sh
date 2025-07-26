@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Need gum to query for input
-yay -S --noconfirm --needed gum
+paru -S --noconfirm --needed gum
 
 # Configure identification
 source ~/.local/share/omarchy/ansi.sh

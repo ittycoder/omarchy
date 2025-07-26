@@ -1,12 +1,12 @@
 #!/bin/bash
 
 if [[ "--remove" == "$1" ]]; then
-  yay -Rns --noconfirm fprintd
+  paru -Rns --noconfirm fprintd
   sudo rm -rf /etc/pam.d/polkit-1
   sudo sed -i '/pam_fprintd\.so/d' /etc/pam.d/sudo
   echo -e "\e[32mYou've successfully removed the fingerprint setup.\e[0m"
 else
-  yay -S --noconfirm --needed fprintd usbutils
+  paru -S --noconfirm --needed fprintd usbutils
 
   if ! lsusb | grep -Eiq 'fingerprint|synaptics|goodix'; then
     echo -e "\e[31m\nNo fingerprint sensor detected.\e[0m"

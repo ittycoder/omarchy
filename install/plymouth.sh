@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if ! command -v plymouth &>/dev/null; then
-  yay -S --noconfirm --needed plymouth
+  paru -S --noconfirm --needed plymouth
 
   # Skip if plymouth already exists for some reason
   # Backup original mkinitcpio.conf just in case

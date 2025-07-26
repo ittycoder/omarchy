@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [ -z "$OMARCHY_BARE" ]; then
-  yay -S --noconfirm --needed ttf-font-awesome noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra
+  paru -S --noconfirm --needed ttf-font-awesome noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra
 else
-  yay -S --noconfirm --needed ttf-font-awesome noto-fonts noto-fonts-emoji
+  paru -S --noconfirm --needed ttf-font-awesome noto-fonts noto-fonts-emoji
 fi
 
 mkdir -p ~/.local/share/fonts
